@@ -1,0 +1,31 @@
+<div class="flex" *ngIf="flag">
+    <h4 style="margin-left: 70px;"> Please Login to the site..</h4>
+    <form #userdata="ngForm" (ngSubmit)="onLogin(userdata)" class="frm">
+        <label for="username" class="frm">Login ID:</label>
+        <input style="color: black;" type="text" #usernam="ngModel"
+            [class.is-invalid]="usernam.invalid && usernam.touched" name="username" id="username_inp"
+            placeholder="Enter Username" required ngModel><br><br>
+        <label for="password" class="frm">Password:</label>
+        <input style="color: black;" #pass="ngModel" [class.is-invalid]="pass.invalid && pass.touched" type="password"
+            name="password" id="password_inp" placeholder="Enter Password" required ngModel><br><br>
+        <button class="btn btn-danger sign-in">Sign-In</button>
+        <button class="btn btn-warning sign-up" (click)="flag=!flag">Sign-Up</button>
+    </form>
+</div>
+<!-- <router-outlet></router-outlet> -->
+
+<div class="flex" *ngIf="!flag">
+    <h4 style="margin-left: 15px;">Hey Mate..!!!, Please Sign-Up to the site..</h4>
+    <form #userform="ngForm" (ngSubmit)="onSubmit(userform)" class="frm">
+        <label for="username" class="frm">Username:</label>
+        <input style="color: black;" type="text" #usernam="ngModel"
+            [class.is-invalid]="usernam.invalid && usernam.touched" name="username" id="username"
+            placeholder="Enter Username" required ngModel><br><br>
+        <label for="password" class="frm">Password:</label>
+        <input style="color: black;" type="password" #pass="ngModel" [class.is-invalid]="pass.invalid && pass.touched"
+            name="password" id="password" placeholder="Enter Password" required ngModel><br><br>
+        <button [disabled]="userform.form.invalid" class="btn btn-danger sign-up-up">Sign-Up</button>
+    </form>
+    <p style="margin-top: 10px; margin-left: 80px;" class="frm">Already a User? <a
+            style="font-style: bold; color:rgb(238, 234, 18);" (click)="flag=!flag">Login</a></p>
+</div>

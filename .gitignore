@@ -1,0 +1,7 @@
+.vscode
+.angular
+assets/
+environments/
+.*pyc
+.*db
+__pycache__
