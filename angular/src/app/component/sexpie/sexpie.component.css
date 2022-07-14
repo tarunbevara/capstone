@@ -1,0 +1,15 @@
+.dash {
+    height: 600px;
+    width: 900px;
+}
+
+* {
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+h2 {
+    background-color: #fff;
+}

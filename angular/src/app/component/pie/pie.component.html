@@ -1,0 +1,26 @@
+<div>
+    <nav class="navbar navbar-light bg-light justify-content-between" style="background-color: rgb(213, 223, 122);">
+        <p class="navbar-brand nv" style="color: rgb(214, 133, 26); font-size: 2em;margin-right: 10%;">Welcome
+            {{user_name}}</p>
+        <button class="navbar-brand"
+            style="color: rgb(214, 133, 26); font-size: 2em; margin-right: 10%; background-color: rgb(213, 223, 122); border-color: rgb(213, 223, 122);"
+            (click)="onHome()">Home</button>
+        <button class="navbar-brand"
+            style="color: rgb(214, 133, 26); font-size: 2em; margin-right: 10%; background-color: rgb(213, 223, 122); border-color: rgb(213, 223, 122);"
+            (click)="onPie()">Pie
+            Charts</button>
+            <button class="navbar-brand"
+            style="color: rgb(214, 133, 26); font-size: 2em; margin-right: 10%; background-color: rgb(213, 223, 122); border-color: rgb(213, 223, 122);"
+            (click)="onBar()">Bar
+            Charts</button>
+        <button class="btn btn-outline-success my-2 my-sm-0"
+            style="float: right; margin-right: 15px; margin-top: 10px; color: brown;" type="submit"
+            (click)="onLogout()">LogOut</button>
+    </nav>
+</div>
+<app-agepie></app-agepie>
+<hr>
+<app-regionpie></app-regionpie>
+<hr>
+<app-sexpie></app-sexpie>
+<hr>
